@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Pair Version</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <div class="app-header">
+            <h1>Task Manager</h1>
+            <p class="subtitle">Manage your daily tasks efficiently</p>
+        </div>
+
+        <section class="task-input-area">
+            <form id="taskForm" class="task-form">
+                <div class="input-wrapper">
+                    <input 
+                        type="text" 
+                        id="newTaskInput" 
+                        class="task-input-field"
+                        placeholder="What needs to be done?"
+                        autocomplete="off"
+                        aria-label="New task input"
+                    >
+                    <button type="submit" class="submit-btn" aria-label="Add new task">
+                        Add
+                    </button>
+                </div>
+                <div id="validationError" class="validation-error" role="alert"></div>
+            </form>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-controls">
+                <button class="filter-button active" data-status="all">
+                    All
+                </button>
+                <button class="filter-button" data-status="active">
+                    Active
+                </button>
+                <button class="filter-button" data-status="completed">
+                    Completed
+                </button>
+            </div>
+        </section>
+
+        <section class="task-display-area">
+            <div id="tasksContainer" class="tasks-container">
+                <ul id="tasksList" class="tasks-list" role="list">
+                    <!-- Tasks rendered here -->
+                </ul>
+                <div id="noTasksMessage" class="no-tasks-message">
+                    <p>No tasks to display</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <span id="taskCount" class="task-counter">0 tasks</span>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
